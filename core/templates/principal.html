@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block titulo %} {% endblock %}</title>
+    {% load static %}
+    <link rel="STYLESHEET"  href=" {% static 'core/css/estilos.css'  %}">
+    <link rel="STYLESHEET"  href=" {% static 'core/css/menuUniverso.css'  %}">
+
+</head>
+<body>
+<h1>INSTITUTO TECNOLOGICO GUAYAQUIL</h1>
+<nav class="menuCSS3">
+		<ul>
+			<li><a href="{% url 'inicio'  %}">INICIO</a></li>
+			<li><a href="{% url 'noticias'  %}">NOTICIAS</a>
+				<ul>
+					<li><a href="#">Juan</a></li>
+					<li><a href="#">Paco</a></li>
+					<li><a href="#">Ramón</a></li>
+					<li><a href="#">María</a></li>
+				</ul>
+			</li>
+			<li><a href="{% url 'farandula'  %}">FARANDULA</a>
+				<ul>
+					<li><a href="#">Email</a></li>
+					<li><a href="#">Mapa</a></li>
+				</ul>
+
+			</li>
+            <li><a href="{% url 'quienes_somos'  %}">QUIEN_SOY</a></li>
+            <li><a href="{% url 'blog'  %}">NUESTROS PRODUCTOS</a></li>
+            <li><a href="{% url 'bryan'  %}">CONTACTO</a></li>
+		</ul>
+	</nav>
+<img src="{% static 'core/img/slide3.jpg'  %}">
+{% block contenido  %} {% endblock %}
+<footer>
+    sistema con djando hecho por cando aguayo
+</footer>
+</body>
+</html>
